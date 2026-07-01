@@ -1015,3 +1015,69 @@ footer {
     }
 }
 
+/* About Experience Styling */
+.about-experience {
+    margin-top: 30px;
+    border-top: 1px solid var(--border-glass);
+    padding-top: 20px;
+}
+
+.about-experience h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent-teal);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 16px;
+    transition: var(--transition-smooth);
+}
+
+.experience-item:hover {
+    border-color: rgba(0, 242, 254, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.exp-role {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.exp-date {
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+    font-weight: 500;
+}
+
+.exp-company {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.exp-desc {
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 0 !important;
+    line-height: 1.5;
+}
+
