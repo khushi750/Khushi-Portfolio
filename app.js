@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.disabled = false;
                 }, 3000);
             }, 1200);
+        });
     }
 
     // 6. Mobile Navigation Drawer Toggle
