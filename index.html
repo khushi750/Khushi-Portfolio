@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Tailor | Creative Developer & 3D Web Artist</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Khushi Tailor, an immersive 3D developer and frontend engineer specializing in Three.js, interactive visual arts, and sleek UI/UX design.">
+    <meta name="keywords" content="Khushi Tailor, Portfolio, 3D Web, WebGL, Three.js, Creative Developer, React, Frontend Engineer, Glassmorphism">
+    <meta name="author" content="Khushi Tailor">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 3D Particle Nebula Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Glowing Background Blur Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Preloader Screen -->
+    <div id="preloader" aria-hidden="false">
+        <div class="loader-logo" id="preloader-logo">KHUSHI<span></span></div>
+        <div class="loader-bar">
+            <div class="loader-progress" id="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#hero" class="logo" id="nav-logo">
+            KHUSHI<span></span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Main Navigation" id="main-nav">
+            <ul>
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- 1. Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <p class="hero-tagline" id="hero-tagline-text">CREATIVE VISUAL DEVELOPMENT</p>
+                <h1 class="hero-title" id="hero-main-title">
+                    Crafting Immersive<br><span>Digital Realms</span>
+                </h1>
+                <p class="hero-description" id="hero-desc-text">
+                    Hi, I'm Khushi Tailor. I'm a developer and designer passionate about merging interactive 3D arts, computational aesthetics, and high-performance frontend interfaces.
+                </p>
+                <div class="hero-buttons" id="hero-btn-container">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about">
+            <div class="section-tag">Who I Am</div>
+            <h2 class="section-title">The Mind behind the Code</h2>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-text">
+                        <p>
+                            I specialize in bridging the gap between artistic vision and complex technical implementation. By blending design concepts with web graphics like WebGL and GLSL, I construct digital environments that feel organic, alive, and responsive to user interaction.
+                        </p>
+                        <p>
+                            My approach focuses on fine-tuning micro-animations, optimizing rendering budgets, and crafting clean, scalable frontend codebases. When I'm not writing shaders or tweaking layouts, I research modern human-computer interaction patterns.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-num">3+</div>
+                            <div class="highlight-title">Years Coding</div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-num">15+</div>
+                            <div class="highlight-title">Projects Shipped</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="hologram-ring"></div>
+                    <div class="hologram-ring-2"></div>
+                    <div class="hologram-avatar">
+                        <canvas id="about-hologram-canvas"></canvas>
+                        <div class="hologram-glitch"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills">
+            <div class="section-tag">Expertise</div>
+            <h2 class="section-title">Technological Toolkit</h2>
+            
+            <div class="skills-grid">
+                <!-- Immersive Tech -->
+                <div class="skills-category">
+                    <h3><i class="fa-solid fa-cubes"></i> 3D & Graphics</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Three.js / WebGL</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GLSL Shaders</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GSAP Animations</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Core -->
+                <div class="skills-category">
+                    <h3><i class="fa-solid fa-code"></i> Frontend Engineering</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React & Next.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3 Grid/Flex</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative & Design -->
+                <div class="skills-category">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Creative Design</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Figma Architecture</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & Code Workflows</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-progress="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects">
+            <div class="section-tag">Featured Works</div>
+            <h2 class="section-title">Digital Creations</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <div class="project-image-placeholder">
+                            <span>Nebula Explorer</span>
+                            <!-- SVG wireframe globe background representation -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="0.5"/>
+                                <path d="M10,50 Q50,90 90,50 Q50,10 10,50" fill="none" stroke="white" stroke-width="0.5"/>
+                                <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="white" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nebula Explorer</h3>
+                        <p class="project-description">An interactive 3D universe portal utilizing customized particle shaders. Users can fly through stellar nebulae and inspect individual star parameters.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Three.js</span>
+                            <span class="project-tag">GLSL</span>
+                            <span class="project-tag">GSAP</span>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="project-link" rel="noopener">
+                            View Case Study <svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2zm0 2v14h14V5H5zm2 5h2v7H7v-7zm4-3h2v10h-2V7zm4 6h2v4h-2v-4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <div class="project-image-placeholder">
+                            <span>Synesthesia Audio Synth</span>
+                            <!-- SVG sound waves representation -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,50 L20,30 L30,70 L40,40 L50,60 L60,20 L70,80 L80,45 L90,50" fill="none" stroke="white" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Synesthesia Synth</h3>
+                        <p class="project-description">A real-time audio-visual synthesizer linking Web Audio API analysis with color coordinates and rendering frequency wave structures.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Web Audio API</span>
+                            <span class="project-tag">Canvas2D</span>
+                            <span class="project-tag">ES6 Modules</span>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="project-link" rel="noopener">
+                            View Case Study <svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2zm0 2v14h14V5H5zm2 5h2v7H7v-7zm4-3h2v10h-2V7zm4 6h2v4h-2v-4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <div class="project-image-placeholder">
+                            <span>Aero Glass Dashboard</span>
+                            <!-- SVG panels representation -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="70" height="70" rx="5" fill="none" stroke="white" stroke-width="0.5"/>
+                                <line x1="15" y1="40" x2="85" y2="40" stroke="white" stroke-width="0.5"/>
+                                <line x1="45" y1="40" x2="45" y2="85" stroke="white" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Aero Glass Dashboard</h3>
+                        <p class="project-description">A creative telemetry visualizer exploring the boundaries of CSS glassmorphism, depth shaders, and responsive UI scaling techniques.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Glassmorphism</span>
+                            <span class="project-tag">CSS Grid</span>
+                            <span class="project-tag">Next.js Architecture</span>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="project-link" rel="noopener">
+                            View Case Study <svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2zm0 2v14h14V5H5zm2 5h2v7H7v-7zm4-3h2v10h-2V7zm4 6h2v4h-2v-4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact">
+            <div class="section-tag">Let's Connect</div>
+            <h2 class="section-title">Start a Conversation</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div>
+                        <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 30px;">
+                            Have an exciting project idea, a position open, or just want to chat about creative coding? Drop me a message, and I'll get back to you within 24 hours.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <p>khushi.tailor.dev@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-text">
+                                    <h4>Location</h4>
+                                    <p>India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/khushi-tailor-176895320" target="_blank" class="social-btn" aria-label="LinkedIn Profile" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-btn" aria-label="GitHub Profile" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter Profile" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="form-name">Name</label>
+                        <input type="text" id="form-name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-email">Email</label>
+                        <input type="email" id="form-email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" rows="5" placeholder="Let's build something amazing..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>&copy; 2026 Khushi Tailor. All rights reserved.</div>
+            <div style="font-size: 0.85rem; color: var(--accent-teal);">Designed & Engineered with &hearts;</div>
+        </footer>
+
+    </main>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Main Script (Module) -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
